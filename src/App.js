@@ -33,34 +33,57 @@ function App() {
       <section className='content'>
         <Card  title="Days Passed:" icon='clock'>
           <Section title="EB-3 PERM - Filed:">
-            <p><b>August 15, 2022: </b> <span> {getDiff('08/15/2022')} Days Ago </span></p>
+            <p>
+              <b>August 15, 2022:</b>
+              <span> {getDiff('08/15/2022')} Days Ago </span>
+            </p>
           </Section>
 
           <Section title="EB-2 (i-140) - Filed:">
-            <p><b>January 7, 2022: </b> <span> {getDiff('01/07/2022')} Days Ago </span></p>
+            <p>
+              <b>January 7, 2022:</b> 
+              <span> {getDiff('01/07/2022')} Days Ago </span>
+            </p>
           </Section>
           
           <Section title="EAD (i-765) - Received: ">
-            <p><b>August 9, 2022: </b> <span> {getDiff('08/09/2022')} Days Ago </span></p>
+            <p>
+              <b>August 9, 2022:</b> 
+              <span> {getDiff('08/09/2022')} Days Ago </span>
+            </p>
           </Section>
         </Card>
 
         <Card  title="Estimations:" icon='bullhorn'>
           <Section title="DOL's - EB-3 PERM Estimation:">
-              <p><b>"180 Days": </b> <span> {convertToString(addToDate('08/15/2022', 180))} </span></p>
-              <p><i>How long from today?: {getDiff(addToDate('08/15/2022', 180))*-1} Days</i></p>
+              <p>
+                <b>"186 Days":</b> 
+                <span> {convertToString(addToDate('08/15/2022', 186))} </span>
+              </p>
+              <p>
+                <i>How long from today?: {getDiff(addToDate('08/15/2022', 180))*-1} Days</i>
+              </p>
               <br/>
-              <p><b>"270 Days (With Audit)": </b> <span> {convertToString(addToDate('08/15/2022', 270))} </span></p>
+              <p>
+                <b>"270 Days (With Audit)":</b> 
+                <span> {convertToString(addToDate('08/15/2022', 270))} </span>
+              </p>
           </Section>
 
           <Section title="Lawfully's - i-140 Estimation:">
-            <p><b>"After an average of 312 Days, 55% Cases Approved": </b></p>
+            <p>
+              <b>"After an average of 312 Days, 55% Cases Approved": </b>
+            </p>
             <p> {convertToString(addToDate('01/07/2022', 312))} </p>
-            <p><i>How long from today?: {getDiff(addToDate('01/07/2022', 314))*-1} Days</i></p>
+            <p>
+              <i> How long from today?: {getDiff(addToDate('01/07/2022', 314))*-1} Days </i>
+            </p>
           </Section>
 
           <Section title="Lawfully's - i-131 (AP) Estimation:">
-            <p><b>"After an average of 35 Days, 51% Cases Approved": </b> </p>
+            <p>
+              <b>"After an average of 35 Days, 51% Cases Approved": </b> 
+            </p>
             <p> {convertToString(addToDate('08/19/2022', 35))} </p>
           </Section>
         </Card>
