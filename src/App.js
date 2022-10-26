@@ -63,10 +63,24 @@ function App() {
               <p>
                 <i>How long from today?: {getDiff(addToDate('08/15/2022', 180))*-1} Days</i>
               </p>
+              <p>
+                <b>"+(Premium Processing)":</b> 
+                <br/>
+                <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate('08/15/2022', 186+22))} </span>
+                <br/>
+                <span><u>45 Days:</u> {convertToString(addToDate('08/15/2022', 186+45))} </span>
+              </p>
               <br/>
               <p>
                 <b>"270 Days (With Audit)":</b> 
                 <span> {convertToString(addToDate('08/15/2022', 270))} </span>
+              </p>
+              <p>
+                <b>"+(Premium Processing)":</b> 
+                <br/>
+                <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate('08/15/2022', 270+22))} </span>
+                <br/>
+                <span><u>45 Days:</u> {convertToString(addToDate('08/15/2022', 270+45))} </span>
               </p>
           </Section>
 
