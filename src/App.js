@@ -61,7 +61,7 @@ function App() {
                 <span> {convertToString(addToDate('08/15/2022', 186))} </span>
               </p>
               <p>
-                <i>How long from today?: {getDiff(addToDate('08/15/2022', 180))*-1} Days</i>
+                <i>How long from today?: {getDiff(addToDate('08/15/2022', 186))*-1} Days</i>
               </p>
               <p>
                 <b>"+(Premium Processing)":</b> 
@@ -86,11 +86,11 @@ function App() {
 
           <Section title="Lawfully's - i-140 Estimation:">
             <p>
-              <b>"After an average of 312 Days, 55% Cases Approved": </b>
+              <b>"After an average of 298 Days, 56% Cases Approved": </b>
             </p>
-            <p> {convertToString(addToDate('01/07/2022', 312))} </p>
+            <p> {convertToString(addToDate('01/07/2022', 298))} </p>
             <p>
-              <i> How long from today?: {getDiff(addToDate('01/07/2022', 314))*-1} Days </i>
+              <i> How long from today?: {getDiff(addToDate('01/07/2022', 298))*-1} Days </i>
             </p>
           </Section>
 
