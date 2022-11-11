@@ -3,8 +3,9 @@ import React from 'react';
 const Card = ({ children, title, icon }) => {
     return (
         <div className='col'>
-          <i className={`fa fa-${icon}`}></i>
-          <h2> {title} </h2>
+          <div>
+            <h2><i className={`fa fa-${icon}`}></i> {title} </h2>
+          </div>
           {children}
         </div>
     );

@@ -31,7 +31,7 @@ function App() {
       </header>
 
       <section className='content'>
-        <Card  title="Days Passed:" icon='clock'>
+        <Card title="Days Passed:" icon='clock'>
           <Section title="EB-3 PERM - Filed:">
             <p>
               <b>August 15, 2022:</b>
@@ -54,7 +54,7 @@ function App() {
           </Section>
         </Card>
 
-        <Card  title="Estimations:" icon='bullhorn'>
+        <Card title="Estimations:" icon='bullhorn'>
           <Section title="DOL's - EB-3 PERM Estimation:">
               <p>
                 <b>"186 Days":</b> 

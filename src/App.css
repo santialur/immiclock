@@ -32,6 +32,7 @@
 .content { 
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   color: white;
@@ -39,10 +40,15 @@
 }
 
 .col {
-  flex-basis: 45%;
   background-color: #252A3A;
   padding: 0 20px 40px;
-  position: relative;
+  width: 45%;
+}
+
+@media screen and (max-width: 600px) {
+  .col {
+    width: 100%;
+  }
 }
 
 .section {
@@ -56,9 +62,7 @@
 }
 
 .col .fa {
-  position: absolute;
-  top: 50px;
-  right: 55px;
+  font-size: 30px;
 }
 
 @keyframes App-logo-spin {
