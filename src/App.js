@@ -3,6 +3,12 @@ import './App.css';
 import Card from './components/Card';
 import Section from './components/Section';
 
+//https://www.immi-usa.com/perm-processing-time-updates/
+//https://flag.dol.gov/processingtimes
+const DOL_PERM_DAYS_AVG = 200;
+const DOL_PERM_DAYS_AVG_AUDIT = 270;
+const PERM_DATE_FILED = '08/11/2022';
+
 const getDiff = (targetDate) => {
   const today = new Date().getTime();
   const date2 = new Date(targetDate).getTime();
@@ -34,8 +40,8 @@ function App() {
         <Card title="Days Passed:" icon='clock'>
           <Section title="EB-3 PERM - Filed:">
             <p>
-              <b>August 15, 2022:</b>
-              <span> {getDiff('08/15/2022')} Days Ago </span>
+              <b>August 11, 2022:</b>
+              <span> {getDiff(PERM_DATE_FILED)} Days Ago </span>
             </p>
           </Section>
 
@@ -57,30 +63,30 @@ function App() {
         <Card title="Estimations:" icon='bullhorn'>
           <Section title="DOL's - EB-3 PERM Estimation:">
               <p>
-                <b>"186 Days":</b> 
-                <span> {convertToString(addToDate('08/15/2022', 186))} </span>
+                <b>{DOL_PERM_DAYS_AVG} Days:</b> 
+                <span> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG))} </span>
               </p>
               <p>
-                <i>How long from today?: {getDiff(addToDate('08/15/2022', 186))*-1} Days</i>
+                <i>How long from today?: {getDiff(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG))*-1} Days</i>
               </p>
               <p>
                 <b>"+(Premium Processing)":</b> 
                 <br/>
-                <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate('08/15/2022', 186+22))} </span>
+                <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG+22))} </span>
                 <br/>
-                <span><u>45 Days:</u> {convertToString(addToDate('08/15/2022', 186+45))} </span>
+                <span><u>45 Days:</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG+45))} </span>
               </p>
               <br/>
               <p>
-                <b>"270 Days (With Audit)":</b> 
-                <span> {convertToString(addToDate('08/15/2022', 270))} </span>
+                <b>"{DOL_PERM_DAYS_AVG_AUDIT} Days (With Audit)":</b> 
+                <span> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG_AUDIT))} </span>
               </p>
               <p>
                 <b>"+(Premium Processing)":</b> 
                 <br/>
-                <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate('08/15/2022', 270+22))} </span>
+                <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG_AUDIT+22))} </span>
                 <br/>
-                <span><u>45 Days:</u> {convertToString(addToDate('08/15/2022', 270+45))} </span>
+                <span><u>45 Days:</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG_AUDIT+45))} </span>
               </p>
           </Section>
 
