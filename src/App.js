@@ -76,7 +76,7 @@ function App() {
                 <i>How long from today?: {getDiff(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_GOOD))*-1} Days</i>
               </p>
               <p>
-                <b>"+(Premium Processing)":</b> 
+                <b>"+(I-140 Premium Processing)":</b> 
                 <br/>
                 <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_GOOD+22))} </span>
                 <br/>
@@ -93,7 +93,7 @@ function App() {
                 <i>How long from today?: {getDiff(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_BAD))*-1} Days</i>
               </p>
               <p>
-                <b>"+(Premium Processing)":</b> 
+                <b>"+(I-140 Premium Processing)":</b> 
                 <br/>
                 <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_BAD+22))} </span>
                 <br/>
@@ -104,11 +104,11 @@ function App() {
               <h1>With Audit</h1>
               <h2>Optimistic</h2>
               <p>
-                <b>"{DOL_PERM_DAYS_GOOD+DOL_PERM_DAYS_AUDIT_GOOD} Days":</b> 
+                <b>{DOL_PERM_DAYS_GOOD+DOL_PERM_DAYS_AUDIT_GOOD} Days:</b> 
                 <span> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_GOOD+DOL_PERM_DAYS_AUDIT_GOOD))} </span>
               </p>
               <p>
-                <b>"+(Premium Processing)":</b> 
+                <b>"+(I-140 Premium Processing)":</b> 
                 <br/>
                 <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_GOOD+DOL_PERM_DAYS_AUDIT_GOOD+22))} </span>
                 <br/>
@@ -118,11 +118,11 @@ function App() {
 
               <h2>Pessimistic</h2>
               <p>
-                <b>"{DOL_PERM_DAYS_BAD+DOL_PERM_DAYS_AUDIT_BAD} Days":</b> 
+                <b>{DOL_PERM_DAYS_BAD+DOL_PERM_DAYS_AUDIT_BAD} Days:</b> 
                 <span> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_BAD+DOL_PERM_DAYS_AUDIT_BAD))} </span>
               </p>
               <p>
-                <b>"+(Premium Processing)":</b> 
+                <b>"+(I-140 Premium Processing)":</b> 
                 <br/>
                 <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_BAD+DOL_PERM_DAYS_AUDIT_BAD+22))} </span>
                 <br/>

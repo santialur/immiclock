@@ -14,14 +14,9 @@ code {
 
 p {
   margin: 5px 0;
-  font-size: 17px;
 }
 
-span {
-  font-size: 17px;
-}
-
-b {
+b, i, span, p {
   font-size: 17px;
 }
 
