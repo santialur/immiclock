@@ -14,12 +14,20 @@ code {
 
 p {
   margin: 5px 0;
-  font-size: 12px;
+  font-size: 17px;
+}
+
+span {
+  font-size: 17px;
+}
+
+b {
+  font-size: 17px;
 }
 
 h1 {
-  margin: 10px 0;
-  font-size: 25px;
+  margin: 5px 0;
+  font-size: 22px;
   text-decoration: underline;
   /* margin-left: 20px;
   text-align: left; */
@@ -27,14 +35,14 @@ h1 {
 
 h2 {
   margin-bottom: 5px;
-  font-size: 22px;
+  font-size: 20px;
   font-style: italic;
   /* margin-left: 50px; */
 }
 
 h3 {
   font-style: italic;
-  font-size: 20px;
+  font-size: 19px;
   text-decoration: underline;
   font-weight: 400;
   margin: 8px 0;
@@ -42,4 +50,7 @@ h3 {
 
 h4 {
   margin-bottom: 10px;
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 18px;
 }
