@@ -3,7 +3,7 @@ import React from 'react';
 const Section = ({ title, children }) => {
     return (
         <div className='section'>
-            <h3>{title}</h3>
+            <h4>{title}</h4>
             {children}
         </div>
     );

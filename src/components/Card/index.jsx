@@ -4,7 +4,7 @@ const Card = ({ children, title, icon }) => {
     return (
         <div className='col'>
           <div>
-            <h2><i className={`fa fa-${icon}`}></i> {title} </h2>
+            <h4><i className={`fa fa-${icon}`}></i> {title} </h4>
           </div>
           {children}
         </div>

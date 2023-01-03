@@ -5,8 +5,11 @@ import Section from './components/Section';
 
 //https://www.immi-usa.com/perm-processing-time-updates/
 //https://flag.dol.gov/processingtimes
-const DOL_PERM_DAYS_AVG = 200;
-const DOL_PERM_DAYS_AVG_AUDIT = 270;
+const DOL_PERM_DAYS_GOOD = 190;
+const DOL_PERM_DAYS_BAD = 240;
+
+const DOL_PERM_DAYS_AUDIT_GOOD = 90;
+const DOL_PERM_DAYS_AUDIT_BAD = 120;
 const PERM_DATE_FILED = '08/11/2022';
 
 const getDiff = (targetDate) => {
@@ -62,32 +65,70 @@ function App() {
 
         <Card title="Estimations:" icon='bullhorn'>
           <Section title="DOL's - EB-3 PERM Estimation:">
+              <br/>
+              <h1>Without Audit</h1>
+              <h2>Optimistic</h2>
               <p>
-                <b>{DOL_PERM_DAYS_AVG} Days:</b> 
-                <span> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG))} </span>
+                <b>{DOL_PERM_DAYS_GOOD} Days:</b> 
+                <span> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_GOOD))} </span>
               </p>
               <p>
-                <i>How long from today?: {getDiff(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG))*-1} Days</i>
+                <i>How long from today?: {getDiff(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_GOOD))*-1} Days</i>
               </p>
               <p>
                 <b>"+(Premium Processing)":</b> 
                 <br/>
-                <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG+22))} </span>
+                <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_GOOD+22))} </span>
                 <br/>
-                <span><u>45 Days:</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG+45))} </span>
+                <span><u>45 Days:</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_GOOD+45))} </span>
               </p>
               <br/>
+
+              <h2>Pessimistic</h2>
               <p>
-                <b>"{DOL_PERM_DAYS_AVG_AUDIT} Days (With Audit)":</b> 
-                <span> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG_AUDIT))} </span>
+                <b>{DOL_PERM_DAYS_BAD} Days:</b> 
+                <span> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_BAD))} </span>
+              </p>
+              <p>
+                <i>How long from today?: {getDiff(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_BAD))*-1} Days</i>
               </p>
               <p>
                 <b>"+(Premium Processing)":</b> 
                 <br/>
-                <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG_AUDIT+22))} </span>
+                <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_BAD+22))} </span>
                 <br/>
-                <span><u>45 Days:</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_AVG_AUDIT+45))} </span>
+                <span><u>45 Days:</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_BAD+45))} </span>
               </p>
+              <br/>
+
+              <h1>With Audit</h1>
+              <h2>Optimistic</h2>
+              <p>
+                <b>"{DOL_PERM_DAYS_GOOD+DOL_PERM_DAYS_AUDIT_GOOD} Days":</b> 
+                <span> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_GOOD+DOL_PERM_DAYS_AUDIT_GOOD))} </span>
+              </p>
+              <p>
+                <b>"+(Premium Processing)":</b> 
+                <br/>
+                <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_GOOD+DOL_PERM_DAYS_AUDIT_GOOD+22))} </span>
+                <br/>
+                <span><u>45 Days:</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_GOOD+DOL_PERM_DAYS_AUDIT_GOOD+45))} </span>
+              </p>
+              <br/>
+
+              <h2>Pessimistic</h2>
+              <p>
+                <b>"{DOL_PERM_DAYS_BAD+DOL_PERM_DAYS_AUDIT_BAD} Days":</b> 
+                <span> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_BAD+DOL_PERM_DAYS_AUDIT_BAD))} </span>
+              </p>
+              <p>
+                <b>"+(Premium Processing)":</b> 
+                <br/>
+                <span><u>22 Days: (15 + Mail Time)</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_BAD+DOL_PERM_DAYS_AUDIT_BAD+22))} </span>
+                <br/>
+                <span><u>45 Days:</u> {convertToString(addToDate(PERM_DATE_FILED, DOL_PERM_DAYS_BAD+DOL_PERM_DAYS_AUDIT_BAD+45))} </span>
+              </p>
+              <br/>
           </Section>
 
           <Section title="Lawfully's - i-140 Estimation:">
